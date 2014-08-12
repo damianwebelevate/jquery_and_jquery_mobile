@@ -1,0 +1,503 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta charset="utf-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<link rel="stylesheet" href="css/themes/d.min.css" />
+	<link rel="stylesheet" href="css/themes/e.min.css" />
+	<link rel="stylesheet" href="css/themes/f.min.css" />
+	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	
+	<!--local coppies of js and css-->
+	<link rel="stylesheet" href="css/jquerymobile.css" />
+	<script src="js/jQuery.js"></script>
+	<script src="js/jquerymobile.js"></script>
+
+	<script src="js/myscript.js"></script>
+	<link rel="stylesheet" href="css/mystyles.css" />
+</head>
+<body>
+
+<!--
+* Author- Damian O'Rourke
+* Assignment WE3.0 Mobile Web Applications, Digital Skills Academy
+* Student ID: D13126114
+* Date: 2014/03/18
+-->
+
+
+<!--Notes: pure trial and error this line: data-role="panel" data-theme="b" data-position="left" data-display="reveal" data-animate="true" data-display="push" is the same as saying this line: class="us-panel us-panel-position-left ui-panel-display-reveal ui-panel-closed ui-panel-animate"-->
+
+<!--**************
+*                *
+*    Panel       *
+*                *
+******************-->
+<!--data-theme="b"-->
+<div id="homePanel" class="panel left panel-01" data-theme="b" data-role="panel" data-position="left" data-display="push" >
+		<div data-role="content">
+				<h3>Welcom to my Web App</h3>
+				<ul data-role="listview" data-inset="true">
+					<li data-role="list-divider">Menu</li>
+					<li><a href="#About">About Us</a></li>
+					<li><a href="#js">Internal JSON</a></li>
+					<li><a href="#page3">List Example</a></li>
+					<li><a href="#page4">Grid</a></li>
+				</ul>
+				<a href="#" data-rel="close" data-role="button" data-theme="b" data-icon="delete" data-inline="true" role="button" data-iconpos="notext" >Close panel</a>
+			</div>
+		</div>
+
+<!--**************
+*                *
+*    home page   *
+*                *
+******************-->
+<!--data-theme="a" "b"-->
+<!--setting the data-title here is similar to the title tag in HTML -->
+<div id="Home" data-role="page" data-fullscreen="true" data-theme="a" data-title="Home">
+		<div data-role="header" data-theme="b" data-position="fixed" data-id="dor_header" >
+			<h1>Home</h1>
+			<!--Note use class="ui-btn-right" to "float" icon to the right-->
+			<a id="menu" href="#homePanel" data-icon="bars" data-iconpos="notext" >Menu</a>
+			<a href="#Home" data-icon="home" data-iconpos="notext"  >Home</a>
+		</div>
+		<!--list item with data transitions-->
+		<!--using a div with a data-role of content indents the content on the page-->
+		<div data-role="content">
+			<p>Hi how are you?</p>
+			<ul data-role="listview" data-inset="true" data-theme="f">
+			<li><a href="#About" data-transition="pop" >About Us</a></li>
+			<li><a href="#js" data-transition="slide" >Internal JSON</a></li>
+			<li><a href="#page3" data-transition="slide" >List Example Page</a></li>
+			<li><a href="#page4" data-transition="fade" >Grid</a></li>
+			</ul>
+		</div><!--close content-->
+	<!--home page footer-->
+	<!--adding a data-id to the header and the footer removes any flickering between pages so long as they are the same id-->
+	<div data-role="footer" data-fullscreen="true" data-position="fixed" data-theme="b" >
+	<!--using the data-role="navbar" allows to set the atttibute data-iconpos to (top(by default)/bottom/right/left/notext(for no text) whatever for all the buttons in the list-->
+		<div data-role="navbar" data-iconpos="left" data-id="dor_footer">
+			<ul>
+			<li><a href="#Home"   data-role="button" data-icon="home" >Home</a></li>
+			<li><a href="#About" data-role="button" data-icon="gear" >About</a></li>
+			<li><a href="#info" data-rel="dialog" data-role="button" data-icon="info" >Info</a></li>
+			<li><a href="#page3" data-role="button" data-icon="bullets">List</a></li>
+			<li><a href="#page4" data-role="button" data-icon="grid" >Grid</a></li>
+			</ul>
+		</div><!--close navbar-->	
+	</div><!--close footer-->
+	
+</div><!--close home page-->
+
+<!--**************
+*                *
+*    about page  *
+*                *
+******************-->
+<!--data-theme="b"-->
+<div id="About" data-role="page" data-fullscreen="true" data-title="About Us">
+		<div data-role="header" data-theme="b" data-position="fixed" data-id="dor_header" >
+			<h1>About Us</h1>
+			<a href="#homePanel" data-icon="bars" data-iconpos="notext" >Menu</a>
+			<a href="#Home" data-icon="home" data-iconpos="notext">Home</a>
+		</div>
+		
+		<div data-role="content">
+		<!--data-inset="true" gives the list a margin on either side similar to the data-role="content"-->
+		<ul data-role="listview" data-inset="true">
+					<li data-role="list-divider" data-theme="b">About Us</li>
+					<li><a href="#Settings" data-rel="dialog" >Author</a></li>
+					<li><a href="#js">Internal JSON</a></li>
+					<li><a href="#page3">List Example</a></li>
+					<li><a href="#page4">Grid</a></li>
+				</ul>
+		</div><!--close content-->
+		<div data-role="content">
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+		</div><!--close second content-->
+		
+	<!--adding a data-id to the header and the footer removes any flickering between pages so long as they are the same id-->
+	<div data-role="footer" data-fullscreen="true" data-position="fixed" data-theme="b" >
+		<div data-role="navbar" data-iconpos="left" data-id="dor_footer">
+			<ul>
+			<li><a href="#Home"   data-role="button" data-icon="home" >Home</a></li>
+			<li><a href="#Settings" data-role="button" data-icon="info" >Author</a></li>
+			<li><a href="#page3" data-role="button" data-icon="bullets" >List</a></li>
+			<li><a href="#page4" data-role="button" data-icon="grid" >Grid</a></li>	
+			</ul>
+		</div><!--close navbar-->	
+	</div><!--close footer-->
+
+		
+</div><!--close about page-->
+
+<!--**************
+*                *
+*    third page  *
+*                *
+******************-->
+<!--data-theme="f"-->
+<div id="page3" data-role="page" data-fullscreen="true" data-theme="f" data-title="JSON">
+		<div data-role="header" data-theme="f" data-position="fixed" data-id="dor_header" >
+			<h1>List</h1>
+			<a href="#homePanel" data-icon="bars" data-iconpos="notext" >Menu</a>
+			<a href="#Home" data-icon="home" data-iconpos="notext">Home</a>
+		</div>
+		
+		<div data-role="content">
+		<h3>Click the plus to see some JSON feed through here</h3>
+                <div data-role="collapsible-set" data-theme="e" data-content-theme="f" data-inset="false">
+				
+                    <div data-role="collapsible">
+                        <h2>Filtered list</h2>
+                        <ul id="here3" data-role="listview" data-filter="true" data-filter-theme="e" data-divider-theme="f" data-inset="false">
+                            
+                        </ul>
+					</div>
+                  
+				</div>
+        </div><!--close content-->		
+				
+		<div data-role="content">
+			<div data-role="controlgroup" data-type="horizontal" data-theme="f">
+				<a href="#js" data-iconpos="top" data-role="button" data-icon="arrow-l" data-theme="f" >JSON</a>
+				<a href="#page4" data-role="button" data-icon="grid" data-iconpos="top" data-theme="f" >Grid</a>
+				<a href="#Home" data-iconpos="top" data-role="button" data-icon="arrow-r" data-theme="f" >Home</a>
+			</div><!--close control group-->
+		</div><!--close content-->
+
+
+	<!--page 3 footer-->
+	<!--adding a data-id to the header and the footer removes any flickering between pages so long as they are the same id-->
+	<div data-role="footer" data-fullscreen="true" data-position="fixed" data-theme="f" >
+		<div data-role="navbar" data-iconpos="left" data-id="dor_footer">
+			<ul>
+			<li><a href="#Home"   data-role="button" data-icon="home" >Home</a></li>
+			<li><a href="#About" data-role="button" data-icon="gear" >About</a></li>
+			<li><a href="#js" data-role="button" data-icon="back" >JSON</a></li>
+			<li><a href="#page4" data-role="button" data-icon="forward" >Grid</a></li>
+			</ul>
+		</div><!--close navbar-->	
+	</div><!--close footer-->
+</div><!--close page-->
+
+<!--**************
+*                *
+*   fourth page  *
+*                *
+******************-->
+<!--data-theme="e"-->
+<div id="page4" data-role="page" data-fullscreen="true" data-theme="e" data-title="Grid" data-id="dor_header" >
+		<div data-role="header" data-theme="e" data-position="fixed" >
+			<h1>Grid</h1>
+			<a href="#homePanel" data-icon="bars" data-iconpos="notext" >Menu</a>
+			<a href="#Home" data-icon="home" data-iconpos="notext">Home</a>
+		</div>
+	
+		<!--information dialog
+		<div data-role="header">
+		<a href="#info" class="ui-btn-right" data-role="button" data-theme="b" data-icon="info" data-rel="dialog" data-iconpos="notext">info</a>
+		</div>-->
+		
+<!--grid layout jquery mobile.  Set up a containing div that can be targeted with either custom css(see mystyles.css or for jquery to open say a full screen option or light box-->		
+		<div id="images" data-role="content">
+		<!--there are numerous options for the grid a through e. ui-grid-a has two divisions ui-grid-b has three divisions so on till ui-grid-e which has 5 divisions.  Once the grid options have been selected the inner divs begin with ui-block-a changing the letter to match the number of grid items selected.  All this from jQuerymobile.com-->
+			<div class="ui-grid-b">
+			<div class="ui-block-a">
+			<img src="img/baige.jpg" />
+			</div>
+			<div class="ui-block-b">
+			<img src="img/blue.jpg" />
+			</div>
+			<div class="ui-block-c">
+			<img src="img/brown.jpg" />
+			</div>
+			<div class="ui-block-a">
+			<img src="img/red.jpg" />
+			</div>
+			<div class="ui-block-b">
+			<img src="img/white.jpg" />
+			</div>
+			<div class="ui-block-c">
+			<img src="img/yellow.jpg" />
+			</div>
+			</div><!--close grid-->
+	</div><!--close content-->
+	<!--second set of content for buttons-->
+	<!--<div data-role="content">
+		<div data-role="controlgroup" data-type="horizontal" data-theme="b">
+			<a href="#Home" data-iconpos="top" data-role="button" data-icon="home" data-theme="b" >Home</a>
+			<a href="#About" data-iconpos="top" data-role="button" data-icon="gear" data-theme="b" >About</a>
+			<a href="#info" data-rel="dialog" data-iconpos="top" data-role="button" data-icon="info" data-theme="b" >Info</a>
+			<a href="#page3" data-role="button" data-icon="back" data-iconpos="top" data-theme="b" >Page 3</a>
+		</div><!--close control group-->
+	<!--</div><!--close content for buttons-->
+	<!--fourth page footer-->
+	<!--adding a data-id to the header and the footer removes any flickering between pages so long as they are the same id-->
+	<div data-role="footer" data-fullscreen="true" data-position="fixed" data-theme="e" >
+		<div data-role="navbar" data-iconpos="left" data-id="dor_footer">
+			<ul>
+			<li><a href="#Home"   data-role="button" data-icon="home" >Home</a></li>
+			<li><a href="#About" data-role="button" data-icon="gear" >About</a></li>
+			<li><a href="#info" data-rel="dialog" data-role="button" data-icon="info" >Info</a></li>
+			<li><a href="#js" data-role="button" data-icon="back" >JSON</a></li>
+			</ul>
+		</div><!--close navbar-->	
+	</div><!--close footer-->
+</div><!--close page-->
+
+
+<!--**************
+*                *
+*   dialog page  *
+*                *
+******************-->
+
+<div id="info" data-role="page" dat-theme="f">
+		<div data-role="header" data-theme="f" >
+			<h1>DIALOG</h1>
+		</div>
+		<div data-role="content">
+		<p>Some dialog about something</p>
+		<a href="#Home" data-icon="home" data-icon-pos="right" data-inline="true" data-role="button" data-theme="f" >Home</a>
+		<a href="#" data-icon="delete" data-icon-pos="right"data-inline="true" data-role="button" data-theme="f" data-rel="back">Cancel</a>
+		</div>
+</div>
+
+<!--***********************
+*                         *
+*   dialog author page    *
+*                         *
+***************************-->
+
+<div id="Settings" data-role="page">
+		<div data-role="header" >
+			<h1>Author</h1>
+		</div>
+		<div data-role="header">
+		<a href="#" class="ui-btn-right" data-role="button" data-icon="user" data-theme="b" data-iconpos="notext" >User</a>
+		<h3>Damian O'Rourke</h3>
+		</div>
+		<div data-role="content">
+		<p>Something About Me....</p>
+		<a href="#Home" data-icon="home" data-icon-pos="right" data-inline="true" data-role="button" data-theme="e" >Home</a>
+		<a href="#" data-icon="delete" data-icon-pos="right" data-inline="true" data-role="button" data-theme="e" data-rel="back">Close</a>
+		</div>
+</div>
+<!--close dialog box settings-->
+
+<!--**************
+*                *
+*   JSON page    *
+*                *
+******************-->
+
+<div id="js" data-role="page" data-fullscreen="true" data-theme="e" data-title="Internal JSON with javascript">
+		<div data-role="header" data-theme="b" data-position="fixed" data-id="dor_header" >	
+			<h1>Internal JSON</h1>
+			<a id="menu" href="#homePanel" data-icon="bars" data-iconpos="notext" >Menu</a>
+			<a href="#Home" data-icon="home" data-iconpos="notext"  >Home</a>
+		</div><!--close header-->
+		
+<!--internal json file javascript-->
+<!--output of first json data-->
+	<div class="ui-grid-a">
+		<div class="ui-block-a">
+				<h1>Data1</h1>
+				<ul data-filter="true" data-role="listview" data-inset="true" data-theme="f" id="here">
+				</ul>
+		</div><!--close block a-->
+		<!--output of second json data-->
+		<div class="ui-block-b">
+				<h1>Data2</h1>
+				<ul data-filter="true" data-role="listview" data-inset="true" data-theme="b" id="here2">
+				</ul>
+		</div><!--close block b-->
+		<!--output of third json data-->
+		<div class="ui-block-a">
+				<h1>Data 3</h1>
+				<ul id="work" data-filter="true" data-role="listview" data-inset="true" data-theme="f" >
+				</ul>
+		</div><!--close block a-->
+		<!--output of third json data-->
+		<div class="ui-block-b">
+			<div data-role="content">
+				<h1>INTERNAL JSON</h1>
+				<div><h3>Name: </h3></div>
+				<div id="here5"></div>
+				<div><h3>Address: </h3></div>
+				<div id="here6"></div>
+			</div><!--close content 3-->
+		</div><!--close block b-->
+
+		<!--js page footer-->
+			<!--adding a data-id to the header and the footer removes any flickering between pages so long as they are the same id-->
+			<div data-role="footer" data-fullscreen="true" data-position="fixed" data-theme="b" >
+			<!--using the data-role="navbar" allows to set the atttibute data-iconpos to (top(by default)/bottom/right/left/notext(for no text) whatever for all the buttons in the list-->
+				<div data-role="navbar" data-iconpos="left" data-id="dor_footer">
+					<ul>
+					<li><a href="#Home"   data-role="button" data-icon="home" >Home</a></li>
+					<li><a href="#About" data-role="button" data-icon="gear" >About</a></li>
+					<li><a href="#info" data-rel="dialog" data-role="button" data-icon="info" >Info</a></li>
+					<li><a href="#page3" data-role="button" data-icon="bullets" >list</a></li>
+					<li><a href="#page4" data-role="button" data-icon="grid" >Grid</a></li>
+					</ul>
+				</div><!--close navbar-->	
+			</div><!--close footer-->
+	</div><!--close grid a-->
+</div><!--close page-->
+
+
+<!--script to open the panel on each page individually thanks to: 
+http://jsfiddle.net/Palestinian/UbT9u/1/
+-->
+
+<script>
+$(function () {
+  $("[data-role=panel]").enhanceWithin().panel();
+});
+</script>
+
+<!--internal json file javascript-->
+<script>
+//Reference stackoverflow jquerymobile lynda.com
+//first json data 
+var data = {
+
+"details" : {
+"Name" : "Damian O'Rourke",
+"Address" : "Somewhere in Wicklow"
+	},
+"contact" : {
+	"Home Phone" : "+353 (0)404 326 58",
+	"Mobile Phone" : "+353 (0)86 332 7757",
+	"Email" : "damiano_rourke@hotmail.com",
+	"Linked In" : "http://www.linkedin.com/profile/view?id=246888918&trk=nav_responsive_tab_profile"
+	}
+};
+
+//for in loop javascript first json
+
+var output = "";
+var text = "Contact";
+
+for ( key in data.details ){
+	if( data.details.hasOwnProperty(key)){
+	output += '<li>' +'<strong>' + key + '</strong>' + ' : ' + data.details[key] + '</li>';
+	}
+}
+
+for ( key in data.contact ){
+	if( data.contact.hasOwnProperty(key)){
+	output += '<li>' +'<strong>' + key + '</strong>' + ' : ' + data.contact[key] + '</li>';
+	}
+}
+
+var list = document.getElementById('here');
+list.innerHTML = output;
+</script>
+
+<!--second script-->
+<script>
+//second json data 2
+var data2 = {
+"description" : "Business Card",
+"name" : "Damian O'Rourke",
+"address" : "Somewhere in Wicklow",
+"links" : {
+	"Gmail" : "http://gmail.com",
+	"Yahoo" : "http://yahoo.com",
+	"Hotmail" : "http://hotmail.com",
+	"LinkedIn" : "http://linkedin.com/profile/view?id=246888918&trk=nav_responsive_tab_profile",
+	"Home" : "#Home",
+	"About" : "#About",
+	"List Example Page" : "#page3",
+	"Grid" : "#page4"
+	}
+};
+
+//second json  
+var output2 = "";
+for (key in data2.links){
+if( data2.links.hasOwnProperty(key)){
+	output2 += '<li>' + 
+	'<a href="' 
+	+ data2.links[key] + 
+	'">' + key + '</a>' + 
+	'</li>';
+	}
+}
+
+var list2 = document.getElementById('here2');
+list2.innerHTML = output2;
+</script>
+
+<!--script 3-->
+<script>
+//json data3 links are in array
+
+var data3 = {
+"description" : "Business Card",
+"name" : "Damian O'Rourke",
+"address" : "Somewhere in Wicklow",
+"links" : [
+	{"Gmail" : "http://gmail.com"},
+	{"Yahoo" : "http://yahoo.com"},
+	{"Hotmail" : "http://hotmail.com"},
+	{"LinkedIn" : "http://linkedin.com/profile/view?id=246888918&trk=nav_responsive_tab_profile"}
+	]
+};
+
+//third json 
+//more accurate accessing of the array and objects in the json
+
+var output3 = "";
+
+for (var i = 0; i <= data3.links.length; i++){
+	for (key in data3.links[i]){
+		if(data3.links[i].hasOwnProperty(key)){
+		 output3 += '<li>' +
+		 '<a href = "' + data3.links[i][key] + '">' 
+		 + key + '</a>' + '</li>';
+		}//
+	}//for each object
+}//for each array element
+
+var list3 = document.getElementById('work');
+list3.innerHTML = output3;
+
+var list5 = document.getElementById('here3');
+list5.innerHTML = output3;
+
+</script>
+<!--script 4-->
+<script>
+var data4 = {
+"description" : "Business Card",
+"name" : "Damian O'Rourke",
+"address" : "Somewhere in Wicklow",
+"links" : [
+	{"Gmail" : "http://gmail.com"},
+	{"Yahoo" : "http://yahoo.com"},
+	{"Hotmail" : "http://hotmail.com"},
+	{"LinkedIn" : "http://linkedin.com/profile/view?id=246888918&trk=nav_responsive_tab_profile"}
+	]
+};
+//internal json accessing single details in a json feed
+var name = data4.name;
+var out = document.getElementById('here5');
+out.innerHTML = '<h1>' + name + '</h1>';
+
+var address = data4.address;
+var out = document.getElementById('here6');
+out.innerHTML = '<h1>' + address + '</h1>';
+</script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta charset="utf-8" />
+
+	<script src="js/jquery.js"></script>
+	<script src="js/jquerymobile.js"></script>
+	
+	<link rel="stylesheet" href="css/jquerymobile.css" />
+
+<!--change the script source here and implement the getJSON to access json feed and manipulate accordingly-->
+<script src="js/myscript.js"></script>	
+</head>
+<body>
+
+<!--
+* Author- Damian O'Rourke
+* Assignment WE3.0 Mobile Web Applications, Digital Skills Academy
+* Student ID: D13126114
+* Date: 2014/03/18
+-->
+
+<!--note that the header and footer links will not work on this page-->
+
+<div id="jQuery" data-role="page" data-fullscreen="true" data-theme="b" data-title="External JSON with jQuery">
+		<div data-role="header" data-theme="b" data-position="fixed" data-id="dor_header" >	
+			<h1>External JSON with jQuery</h1>
+			<a id="menu" href="#homePanel" data-icon="bars" data-iconpos="notext" >Menu</a>
+			<a href="#Home" data-icon="home" data-iconpos="notext"  >Home</a>
+		</div><!--close header-->
+<div data-role="content">		
+<h1>Data3</h1>
+<p>Please access this through your local host </p>
+<p>Note that the links as in home menu and all the nav bar items will not work this is a sample only</p>
+<ul data-filter="true" data-role="listview" data-inset="true" data-theme="" id="here3">
+</ul>
+</div>
+	
+	<!--js page footer-->
+			<!--adding a data-id to the header and the footer removes any flickering between pages so long as they are the same id-->
+			<div data-role="footer" data-fullscreen="true" data-position="fixed" data-theme="b" >
+			<!--using the data-role="navbar" allows to set the atttibute data-iconpos to (top(by default)/bottom/right/left/notext(for no text) whatever for all the buttons in the list-->
+				<div data-role="navbar" data-iconpos="left" data-id="dor_footer">
+					<ul>
+					<li><a href="#Home"   data-role="button" data-icon="home" >Home</a></li>
+					<li><a href="#About" data-role="button" data-icon="gear" >About</a></li>
+					<li><a href="#info" data-rel="dialog" data-role="button" data-icon="info" >Info</a></li>
+					<li><a href="#page3" data-role="button" data-icon="arrow-r" >JSON</a></li>
+					<li><a href="#page4" data-role="button" data-icon="grid" >Grid</a></li>
+					</ul>
+				</div><!--close navbar-->	
+			</div><!--close footer-->
+</div><!--close page-->
+
+</body>
+
+</html>
